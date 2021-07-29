@@ -11,21 +11,21 @@ services:
     image: enterlife/yamdb_final:latest
     restart: always
     volumes:
-      - static_value:/code/static/
-      - media_value:/code/media/
+      - ./static:/code/static
+      - ./media:/code/media
     depends_on:
       - db
     env_file:
       - ./.env
-
   nginx:
     image: nginx:1.19.3
+    restart: always
     ports:
       - "80:80"
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - static_value:/var/html/static/
-      - media_value:/var/html/media/
+      - ./static:/code/static
+      - ./media:/code/media
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
     depends_on:
       - web
 
