@@ -1,8 +1,10 @@
 # api_yamdb
 ![yamdb_workflow](https://github.com/EnterLife/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
 
-Проект: http://84.252.138.255
+Проект: http://84.252.138.255/api/v1
+
 Документация: http://84.252.138.255/redoc/
+
 Панель администратора: http://84.252.138.255/admin/
 
 # Описание
